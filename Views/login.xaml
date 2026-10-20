@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Window xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CLASE3.Views.Login"
+             Title="Login">
+    <ContentPage>
+        <Grid Padding="30"
+              RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto"
+              RowSpacing="16"
+              VerticalOptions="Center">
+            <Image Grid.Row="0"
+                   Source="login.png"
+                   Aspect="AspectFit"
+                   HeightRequest="200"
+                   HorizontalOptions="Center"
+                   Margin="0,0,0,20" />
+
+            <Label Grid.Row="1"
+                   Text="Iniciar sesión"
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   Margin="0,0,0,12" />
+
+            <Entry Grid.Row="2"
+                   Placeholder="Usuario"
+                   Keyboard="Email"
+                   ClearButtonVisibility="WhileEditing"
+                   x:Name="txtUsuario" />
+
+            <Entry Grid.Row="3"
+                   Placeholder="Contraseña"
+                   IsPassword="True"
+                   ClearButtonVisibility="WhileEditing"
+                   x:Name="txtContraseña" />
+
+            <Button Grid.Row="4"
+                    Text="Ingresar"
+                    HorizontalOptions="Fill"
+                    Margin="0,8,0,0"
+                    Clicked="btnIniciarSesion_Clicked" />
+
+            <Button Grid.Row="5"
+                    Text="Registrarse"
+                    HorizontalOptions="Fill"
+                    Margin="0,8,0,0"
+                    Clicked="btnRegistrarse_Clicked" />
+        </Grid>
+    </ContentPage>
+</Window>
